@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 
 #from snowflake.snowpark.context import get_active_session
+#Connection required for streamlit app
 cnx = st.connection("snowflake")
 session = cnx.session()
 
