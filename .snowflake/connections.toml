@@ -1,5 +1,5 @@
 [connections.snowflake]
-account = "KGVIPXS-BIB01034"
+
 account = "KGVIPXS-BIB01034"
 user = "xxx"
 password = "xxxxx"
