@@ -31,7 +31,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select("FRUIT_NAM
 pd_df = my_dataframe.to_pandas()
 #st.dataframe(pd_df)
 #st.dataframe(data=my_dataframe, use_container_width=True)
-st.stop()  # temp, remove as required
+#st.stop()  # temp, remove as required
 
 #ingredients_list = st.multiselect(
 #    "Choose up to 5 ingredients",
