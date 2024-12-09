@@ -1,6 +1,7 @@
 # Import python packages
 import streamlit as st
 import requests
+import pandas as pd
 
 #from snowflake.snowpark.context import get_active_session
 #Connection required for streamlit app
