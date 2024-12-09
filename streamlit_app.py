@@ -23,8 +23,9 @@ st.write("The name on your smoothie will be", name_on_order)
 
 
 #session = get_active_session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME')).collect()
-#st.dataframe(data=my_dataframe, use_container_width=True)
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON')).collect()
+st.dataframe(data=my_dataframe, use_container_width=True)
+st.stop()  # temp, remove as required
 
 #ingredients_list = st.multiselect(
 #    "Choose up to 5 ingredients",
