@@ -40,7 +40,9 @@ pd_df = my_dataframe.to_pandas()
 #)
 
 # Extract fruit names from the collected data
-fruit_options = [row['FRUIT_NAME'] for row in my_dataframe]
+#fruit_options = [row['FRUIT_NAME'] for row in my_dataframe]
+# Extract fruit names from the Pandas DataFrame
+fruit_options = pd_df['FRUIT_NAME'].tolist()
 
 ingredients_list = st.multiselect(
     "Choose up to 5 ingredients",
