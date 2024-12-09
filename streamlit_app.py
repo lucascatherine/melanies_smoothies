@@ -1,17 +1,13 @@
 # Import python packages
 import streamlit as st
+import requests
+
 #from snowflake.snowpark.context import get_active_session
 cnx = st.connection("snowflake")
 session = cnx.session()
 
 from snowflake.snowpark.functions import col
 
-### New Section to display smoothiefroot nutrition info via API call
-import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-#st.text(smoothiefroot_response.json())
-sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
-###
 
 # Write directly to the app
 st.title("Customise Your Smoothie! :cup_with_straw:")
@@ -52,6 +48,10 @@ if ingredients_list:
     
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + " "
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        #st.text(smoothiefroot_response.json())
+        sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
+
     
     # Convert the list to a string with a comma and space separator
     # ingredients_string = ", ".join(ingredients_list)
