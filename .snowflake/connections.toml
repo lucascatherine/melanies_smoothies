@@ -1,7 +1,8 @@
-[default]
+[connections.snowflake]
 account = "KGVIPXS-BIB01034"
-user = "CATL"
-password = "16Snowsnowball10!"
+account = "KGVIPXS-BIB01034"
+user = "xxx"
+password = "xxxxx"
 role = "SYSADMIN"
 warehouse = "COMPUTE_WH"
 database = "SMOOTHIES"
