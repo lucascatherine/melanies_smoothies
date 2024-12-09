@@ -24,7 +24,8 @@ st.write("The name on your smoothie will be", name_on_order)
 
 
 #session = get_active_session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON')).collect()
+#my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON')).collect()
+my_dataframe = session.table("smoothies.public.fruit_options").select("*")
 
 #Convert snowflake dataframe to a pandas dataframe
 pd_df = my_dataframe.to_pandas()
